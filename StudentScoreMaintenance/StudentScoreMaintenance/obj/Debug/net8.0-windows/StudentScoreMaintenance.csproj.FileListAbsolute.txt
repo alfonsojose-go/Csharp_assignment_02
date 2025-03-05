@@ -1,0 +1,16 @@
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\bin\Debug\net8.0-windows\StudentScoreMaintenance.exe
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\bin\Debug\net8.0-windows\StudentScoreMaintenance.deps.json
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\bin\Debug\net8.0-windows\StudentScoreMaintenance.runtimeconfig.json
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\bin\Debug\net8.0-windows\StudentScoreMaintenance.dll
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\bin\Debug\net8.0-windows\StudentScoreMaintenance.pdb
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.Form1.resources
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.csproj.GenerateResource.cache
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.AssemblyInfoInputs.cache
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.AssemblyInfo.cs
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.csproj.CoreCompileInputs.cache
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.dll
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\refint\StudentScoreMaintenance.dll
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.pdb
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\StudentScoreMaintenance.genruntimeconfig.cache
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\ref\StudentScoreMaintenance.dll
