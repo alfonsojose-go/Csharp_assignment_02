@@ -1,5 +1,5 @@
 ﻿StudentScoreMaintenance
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\mcmil\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\App.xaml
 51931418407
 
-11991365393
+8-1303859959
 198-291174909
 AddNewStudent.xaml;AddScore.xaml;MainWindow.xaml;UpdateScore.xaml;UpdateStudentScores.xaml;
 

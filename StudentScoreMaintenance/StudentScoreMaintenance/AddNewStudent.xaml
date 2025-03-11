@@ -1,0 +1,22 @@
+﻿<Window x:Class="StudentScoreMaintenance.AddNewStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentScoreMaintenance"
+        mc:Ignorable="d"
+        Title="AddNewStudent" Height="196" Width="342">
+    <Grid>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Score:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Scores:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="62,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="62,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox HorizontalAlignment="Left" Margin="62,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <Button Content="_Add Score" HorizontalAlignment="Left" Margin="197,45,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
+        <Button Content="Clear _Scores" HorizontalAlignment="Left" Margin="197,107,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
+        <Button Content="_Cancel" HorizontalAlignment="Left" Margin="197,141,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
+        <Button Content="_OK" HorizontalAlignment="Left" Margin="62,141,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
+
+    </Grid>
+</Window>

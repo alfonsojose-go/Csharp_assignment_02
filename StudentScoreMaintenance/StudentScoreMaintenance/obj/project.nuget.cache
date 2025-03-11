@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2TwfywXKqKM=",
+  "dgSpecHash": "nhP2P7lHx6k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alfonso\\Documents\\Red Deer\\RDP\\Winter 2025\\C#.NET\\StudentScoreMaintenance\\StudentScoreMaintenance\\StudentScoreMaintenance.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\mcmil\\Source\\Repos\\Csharp_assignment_02\\StudentScoreMaintenance\\StudentScoreMaintenance\\StudentScoreMaintenance.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mcmil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.13\\microsoft.windowsdesktop.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\mcmil\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.13\\microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\mcmil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.13\\microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\mcmil\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.13\\microsoft.netcore.app.host.win-x64.8.0.13.nupkg.sha512"
+  ],
   "logs": []
 }
