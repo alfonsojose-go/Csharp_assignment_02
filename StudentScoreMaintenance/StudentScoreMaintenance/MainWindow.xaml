@@ -8,16 +8,16 @@
         Title="Student Scores" Height="381" Width="448">
     <Grid Height="360" VerticalAlignment="Top">
         <Label Content="Students List" HorizontalAlignment="Left" Margin="40,21,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="btnAdd" Content="_Add New" HorizontalAlignment="Left" Margin="331,49,0,0" VerticalAlignment="Top" Width="80" Click="btnAdd_Click"/>
-        <Button x:Name="btnUpdate" Content="_Update" HorizontalAlignment="Left" Margin="331,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.139,0.235" Width="80" Click="btnUpdate_Click"/>
-        <Button x:Name="btnDelete" Content="_Delete" HorizontalAlignment="Left" Margin="331,130,0,0" VerticalAlignment="Top" Width="80" Click="btnDelete_Click"/>
+        <Button x:Name="btnAdd" Content="_Add New" HorizontalAlignment="Left" Margin="331,49,0,0" VerticalAlignment="Top" Width="80" Click="btnAdd_Click" TabIndex="1"/>
+        <Button x:Name="btnUpdate" Content="_Update" HorizontalAlignment="Left" Margin="331,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.139,0.235" Width="80" Click="btnUpdate_Click" TabIndex="2"/>
+        <Button x:Name="btnDelete" Content="_Delete" HorizontalAlignment="Left" Margin="331,130,0,0" VerticalAlignment="Top" Width="80" Click="btnDelete_Click" TabIndex="3"/>
         <Label Content="Score Total:" HorizontalAlignment="Left" Margin="46,201,0,0" VerticalAlignment="Top"/>
         <Label Content="Score Count:" HorizontalAlignment="Left" Margin="39,243,0,0" VerticalAlignment="Top"/>
         <Label Content="Average:" HorizontalAlignment="Left" Margin="61,285,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtScoreTotal" HorizontalAlignment="Left" Margin="133,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         <TextBox x:Name="txtScoreCount" HorizontalAlignment="Left" Margin="133,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         <TextBox x:Name="txtAverage" HorizontalAlignment="Left" Margin="133,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="331,284,0,0" VerticalAlignment="Top" Width="80" Click="btnExit_Click"/>
+        <Button x:Name="btnExit" Content="E_xit" HorizontalAlignment="Left" Margin="331,284,0,0" VerticalAlignment="Top" Width="80" Click="btnExit_Click" TabIndex="4"/>
         <ListBox x:Name="lstbxStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,43,133,180" SelectionMode="Single"/>
     </Grid>
 

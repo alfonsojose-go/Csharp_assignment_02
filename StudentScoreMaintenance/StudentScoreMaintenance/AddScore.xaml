@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentScoreMaintenance"
         mc:Ignorable="d"
-        Title="AddScore" Height="99" Width="189">
-    <Grid Margin="0,0,0,-6">
+        Title="Add Score" Height="106" Width="198">
+    <Grid Margin="0,0,0,6">
         <Label Content="Score:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtScore" HorizontalAlignment="Left" Margin="57,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnAdd" Content="_Add" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="64" Click="btnAdd_Click"/>

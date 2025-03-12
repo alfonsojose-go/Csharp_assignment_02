@@ -32,6 +32,20 @@ namespace StudentScoreMaintenance
             lstScores.ItemsSource = Student.Scores;
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Simulate OK button click
+                btnOK.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            }
+            else if (e.Key == Key.Escape)
+            {
+                // Simulate Cancel button click
+                this.Close();
+            }
+        }
+
         public void DisplayScores()
         {
             lstScores.ItemsSource = Student.Scores;
