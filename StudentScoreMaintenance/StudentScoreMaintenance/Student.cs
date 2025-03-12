@@ -9,7 +9,7 @@ namespace StudentScoreMaintenance
 {
     internal class Student
     {
-        public String Name;
+        public String Name { get; set; }
         public List<int> Scores;
 
         public Student(String name)

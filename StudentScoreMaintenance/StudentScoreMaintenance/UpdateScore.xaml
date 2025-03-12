@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentScoreMaintenance"
         mc:Ignorable="d"
-        Title="UpdateScore" Height="92" Width="189">
-    <Grid>
+        Title="Update Score" Height="97" Width="189">
+    <Grid Margin="0,0,0,-3">
         <Label Content="Score:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="57,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="_Update" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="64"/>

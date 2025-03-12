@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentScoreMaintenance"
         mc:Ignorable="d"
-        Title="UpdateStudentScores" Height="236" Width="327">
-    <Grid>
+        Title="Update Student Scores" Height="247" Width="327">
+    <Grid Margin="0,0,0,-6">
         <Label Content="Name:" HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Scores:" HorizontalAlignment="Left" Margin="13,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.406,-1.598"/>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Margin="70,54,0,0" VerticalAlignment="Top" Height="95" Width="164"/>
