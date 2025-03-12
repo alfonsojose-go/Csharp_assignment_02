@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\mcmil\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\obj\Debug\net8.0-windows\
 StudentScoreMaintenance
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\mcmil\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Alfonso\Source\Repos\Csharp_assignment_02\StudentScoreMaintenance\StudentScoreMaintenance\App.xaml
 51931418407
 
 11991365393
-198-291174909
+1981839832580
 AddNewStudent.xaml;AddScore.xaml;MainWindow.xaml;UpdateScore.xaml;UpdateStudentScores.xaml;
 
 False

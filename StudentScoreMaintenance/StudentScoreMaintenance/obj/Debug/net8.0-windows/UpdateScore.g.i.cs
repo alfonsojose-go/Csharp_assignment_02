@@ -53,7 +53,7 @@ namespace StudentScoreMaintenance {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudentScoreMaintenance;V1.0.0.0;component/updatescore.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudentScoreMaintenance;component/updatescore.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UpdateScore.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
