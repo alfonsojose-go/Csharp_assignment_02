@@ -31,6 +31,29 @@ namespace StudentScoreMaintenance
             txtScore.Text = student.Scores[scoreIndex].ToString();
         }
 
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            //Check if the Enter key is pressed
+            if (e.Key == Key.Enter)
+            {
+                // Simulate OK button click
+                int score;
+                // TODO: add message
+                if (!Int32.TryParse(txtScore.Text, out score))
+                    return;
+                Student.UpdateScore(score, ScoreIndex);
+                (this.Owner as UpdateStudentScores).DisplayScores();
+                this.Close();
+            }
+            //Check if the ESC key is pressed
+            else if (e.Key == Key.Escape)
+            {
+                // Simulate Cancel button click
+                this.Close();
+            }
+        }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             int score;

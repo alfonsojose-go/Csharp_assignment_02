@@ -29,6 +29,26 @@ namespace StudentScoreMaintenance
             Student = new Student();
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            //Check if the Enter key is pressed
+            if (e.Key == Key.Enter)
+            {
+                // Simulate OK button click
+                Student.Name = txtName.Text;
+                Students.Add(Student);
+                (Application.Current.MainWindow as MainWindow).UpdateInfo();
+                this.Close();
+            }
+            //Check if the ESC key is pressed
+            else if (e.Key == Key.Escape)
+            {
+                // Simulate Cancel button click
+                this.Close();
+            }
+        }
+
         private void DisplayScores()
         {
             txtScores.Text = Student.ScoresToString();
