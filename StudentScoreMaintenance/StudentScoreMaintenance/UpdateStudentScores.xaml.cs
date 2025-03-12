@@ -62,20 +62,41 @@ namespace StudentScoreMaintenance
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
             int selected = lstScores.SelectedIndex;
+            // Check if user selected a score
             if (selected == -1)
             {
                 MessageBox.Show("error: no score selected. please click on a score and try again");
                 return;
             }
-            
-            Student.RemoveScore(selected);
-            DisplayScores();
+
+            // Show a confirmation MessageBox
+            var result = MessageBox.Show(
+                "Are you sure you want to delete this score?",
+                "Confirm Delete",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            // If the user confirms, delete the selected student
+            if (result == MessageBoxResult.Yes)
+            {
+                Student.RemoveScore(selected);
+                DisplayScores();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Student.ClearScores();
-            DisplayScores();
+            var result = MessageBox.Show(
+                "Are you sure you want to delete this score?",
+                "Confirm Delete",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Student.ClearScores();
+                DisplayScores();
+            }
         }
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
