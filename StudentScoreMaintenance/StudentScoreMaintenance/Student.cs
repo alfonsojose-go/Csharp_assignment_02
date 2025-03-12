@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace StudentScoreMaintenance
@@ -20,27 +21,36 @@ namespace StudentScoreMaintenance
 
         public Student() : this("") { }
 
-        private static void ValidateScore(int score)
+        private static bool ValidateScore(int score)
         {
             if (score < 0 || score > 100)
-                throw new Exception("Score must be within 0 to 100.");
+            {
+                MessageBox.Show($"Score must be within 0 to 100. Got {score}.", "Invalid Score",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Exclamation);
+                return false;
+            }
+            return true;
         }
 
         public void AddScore(int score)
         {
-            ValidateScore(score);
+            if (!ValidateScore(score))
+                return;
             Scores.Add(score);
         }
 
         public void AddScore(int score, int index)
         {
-            ValidateScore(score);
+            if (!ValidateScore(score))
+                return;
             Scores.Insert(index, score);
         }
 
         public void UpdateScore(int newScore, int index)
         {
-            ValidateScore(newScore);
+            if (!ValidateScore(newScore))
+                return;
             Scores[index] = newScore;
         }
 
@@ -59,20 +69,10 @@ namespace StudentScoreMaintenance
         public int ScoreAverage() =>
             ScoreTotal() / ScoreCount();
 
-        public string ScoresToString()
-        {
-            string representation = "";
-
-            foreach (int score in Scores)
-            {
-                representation += "|"; // Separator character
-                representation += score.ToString();
-            }
-
-            return representation;
-        }
+        public string ScoresToString() =>
+            string.Join("|", Scores);
 
         public override string ToString() =>
-            Name + ScoresToString();
+            Name + "|" + ScoresToString();
     }
 }

@@ -28,9 +28,17 @@ public partial class MainWindow : Window
     public void UpdateInfo()
     {
         lstbxStudents.Items.Refresh();
+        DisplayStudentInfo(Students.Count - 1);
+    }
 
-        int total = CalculateScoreTotal();
-        int count = CalculateScoreCount();
+    public void DisplayStudentInfo(int index)
+    {
+        if (index < 0 || index >= Students.Count)
+            return;
+
+        Student student = Students[index];
+        int total = student.ScoreTotal();
+        int count = student.ScoreTotal();
         txtScoreTotal.Text = total.ToString();
         txtScoreCount.Text = count.ToString();
         if (count == 0)
@@ -99,7 +107,7 @@ public partial class MainWindow : Window
             if (result == MessageBoxResult.Yes)
             {
                 // Remove the selected student from the list
-                
+                Students.RemoveAt(lstbxStudents.SelectedIndex);
 
                 // Refresh the ListBox to reflect the changes
                 lstbxStudents.Items.Refresh();
@@ -109,6 +117,28 @@ public partial class MainWindow : Window
         {
             // Show a message if no student is selected
             MessageBox.Show("Please select a student to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+    }
+
+    /*
+     * Button Shorthands
+     */
+
+    private void lstbxStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        DisplayStudentInfo(lstbxStudents.SelectedIndex);
+    }
+
+    private void lstbxStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+    {
+        btnUpdate_Click(sender, e);
+    }
+
+    private void lstbxStudents_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Delete)
+        {
+            btnDelete_Click(sender, e);
         }
     }
 }
