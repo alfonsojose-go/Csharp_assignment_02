@@ -1,12 +1,12 @@
-﻿<Window x:Class="StudentScoreMaintenance.AddNewStudent"
+﻿<Window x:Name="winAddNewStudent" x:Class="StudentScoreMaintenance.AddNewStudent"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentScoreMaintenance"
         mc:Ignorable="d"
-        Title="AddNewStudent" Height="196" Width="342">
-    <Grid>
+        Title="Add New Student" Height="215" Width="342">
+    <Grid Margin="0,0,0,4">
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Score:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <Label Content="Scores:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
