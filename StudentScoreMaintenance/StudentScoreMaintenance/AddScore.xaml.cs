@@ -19,10 +19,28 @@ namespace StudentScoreMaintenance
     /// </summary>
     public partial class AddScore : Window
     {
-        public AddScore()
+        public Student Student;
+
+        public AddScore(Student student)
         {
             InitializeComponent();
+            Student = student;
         }
 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            int score;
+            if (!Int32.TryParse(txtScore.Text, out score))
+                return;
+
+            Student.AddScore(score);
+            (this.Owner as UpdateStudentScores).DisplayScores();
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

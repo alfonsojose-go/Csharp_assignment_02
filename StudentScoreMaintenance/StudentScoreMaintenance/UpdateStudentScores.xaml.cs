@@ -19,9 +19,76 @@ namespace StudentScoreMaintenance
     /// </summary>
     public partial class UpdateStudentScores : Window
     {
-        public UpdateStudentScores()
+        public Student Student;
+        private List<int> BackUpScores;
+
+        public UpdateStudentScores(Student student)
         {
             InitializeComponent();
+            Student = student;
+            BackUpScores = new List<int>(student.Scores);
+
+            txtName.Text = student.Name;
+            lstScores.ItemsSource = Student.Scores;
+        }
+
+        public void DisplayScores()
+        {
+            lstScores.ItemsSource = Student.Scores;
+            lstScores.Items.Refresh();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            var addScoreWindow = new AddScore(Student);
+            addScoreWindow.Owner = this;
+            addScoreWindow.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            int selected = lstScores.SelectedIndex;
+            if (selected == -1)
+            {
+                MessageBox.Show("error: no score selected. please click on a score and try again");
+                return;
+            }
+
+            var updateScoreWindow = new UpdateScore(Student, selected);
+            updateScoreWindow.Owner = this;
+            updateScoreWindow.ShowDialog();
+        }
+
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            int selected = lstScores.SelectedIndex;
+            if (selected == -1)
+            {
+                MessageBox.Show("error: no score selected. please click on a score and try again");
+                return;
+            }
+            
+            Student.RemoveScore(selected);
+            DisplayScores();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Student.ClearScores();
+            DisplayScores();
+        }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Owner as MainWindow).UpdateInfo();
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            // Restore previous scores before modification
+            Student.Scores = BackUpScores;
+            this.Close();
         }
     }
 }

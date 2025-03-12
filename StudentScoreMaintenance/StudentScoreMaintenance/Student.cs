@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace StudentScoreMaintenance
 {
-    internal class Student
+    public class Student
     {
         public String Name { get; set; }
         public List<int> Scores;
@@ -18,9 +18,10 @@ namespace StudentScoreMaintenance
             Scores = new List<int>();
         }
 
+        public Student() : this("") { }
+
         private static void ValidateScore(int score)
         {
-
             if (score < 0 || score > 100)
                 throw new Exception("Score must be within 0 to 100.");
         }
@@ -58,9 +59,9 @@ namespace StudentScoreMaintenance
         public int ScoreAverage() =>
             ScoreTotal() / ScoreCount();
 
-        public override string ToString()
+        public string ScoresToString()
         {
-            string representation = Name;
+            string representation = "";
 
             foreach (int score in Scores)
             {
@@ -70,5 +71,8 @@ namespace StudentScoreMaintenance
 
             return representation;
         }
+
+        public override string ToString() =>
+            Name + ScoresToString();
     }
 }

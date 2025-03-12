@@ -9,15 +9,15 @@
     <Grid Margin="0,0,0,-6">
         <Label Content="Name:" HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Scores:" HorizontalAlignment="Left" Margin="13,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.406,-1.598"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Margin="70,54,0,0" VerticalAlignment="Top" Height="95" Width="164"/>
-        <Button Content="_Add" HorizontalAlignment="Left" Margin="239,54,0,0" VerticalAlignment="Top" Width="64"/>
-        <Button Content="_Update" HorizontalAlignment="Left" Margin="239,79,0,0" VerticalAlignment="Top" Width="64"/>
-        <Button Content="_Remove" HorizontalAlignment="Left" Margin="239,104,0,0" VerticalAlignment="Top" Width="64"/>
+        <ListBox x:Name="lstScores" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Margin="70,54,0,0" VerticalAlignment="Top" Height="95" Width="164"/>
+        <Button x:Name="btnAdd" Content="_Add" HorizontalAlignment="Left" Margin="239,54,0,0" VerticalAlignment="Top" Width="72" Click="btnAdd_Click"/>
+        <Button x:Name="btnUpdate" Content="_Update" HorizontalAlignment="Left" Margin="239,79,0,0" VerticalAlignment="Top" Width="72" Click="btnUpdate_Click"/>
+        <Button x:Name="btnRemove" Content="_Remove" HorizontalAlignment="Left" Margin="239,104,0,0" VerticalAlignment="Top" Width="72" Click="btnRemove_Click"/>
         <Button Content="Clear _Scores" HorizontalAlignment="Left" Margin="239,129,0,0" VerticalAlignment="Top" Width="64"/>
-        <Button Content="Clear _Scores" HorizontalAlignment="Left" Margin="239,129,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBox HorizontalAlignment="Left" Margin="70,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="_Close" HorizontalAlignment="Left" Margin="239,179,0,0" VerticalAlignment="Top" Width="64"/>
-        <Button Content="_OK" HorizontalAlignment="Left" Margin="170,179,0,0" VerticalAlignment="Top" Width="64"/>
+        <Button Content="Clear _Scores" HorizontalAlignment="Left" Margin="239,129,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="70,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="btnClose" Content="_Close" HorizontalAlignment="Left" Margin="239,179,0,0" VerticalAlignment="Top" Width="64" Click="btnClose_Click"/>
+        <Button x:Name="btnOK" Content="_OK" HorizontalAlignment="Left" Margin="170,179,0,0" VerticalAlignment="Top" Width="64" Click="btnOK_Click"/>
 
     </Grid>
 </Window>

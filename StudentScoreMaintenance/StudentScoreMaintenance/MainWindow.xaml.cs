@@ -16,16 +16,46 @@ namespace StudentScoreMaintenance;
 /// </summary>
 public partial class MainWindow : Window
 {
-
-    
+    public List<Student> Students;
 
     public MainWindow()
     {
         InitializeComponent();
-
-      
+        Students = new List<Student>();
+        lstbxStudents.ItemsSource = Students;
     }
 
+    public void UpdateInfo()
+    {
+        lstbxStudents.Items.Refresh();
+
+        int total = CalculateScoreTotal();
+        int count = CalculateScoreCount();
+        txtScoreTotal.Text = total.ToString();
+        txtScoreCount.Text = count.ToString();
+        if (count == 0)
+            txtAverage.Text = "0";
+        else
+            txtAverage.Text = (total / count).ToString();
+    }
+
+    public int CalculateScoreTotal()
+    {
+        int total = 0;
+        foreach (Student student in Students)
+            total += student.ScoreTotal();
+
+        return total;
+    }
+
+    public int CalculateScoreCount()
+    {
+        int count = 0;
+        foreach (Student student in Students)
+            count += student.ScoreCount();
+
+        return count;
+    }
   
     private void btnExit_Click(object sender, RoutedEventArgs e)
     {
@@ -35,14 +65,21 @@ public partial class MainWindow : Window
     private void btnAdd_Click(object sender, RoutedEventArgs e)
     {
         //// Create an instance of the AddNewStudent window
-        var addNewStudentWindow = new AddNewStudent();
+        var addNewStudentWindow = new AddNewStudent(Students);
         addNewStudentWindow.ShowDialog();
 
     }
 
     private void btnUpdate_Click(object sender, RoutedEventArgs e)
     {
-        var updateStudentWindow = new UpdateStudentScores();
+        int selected = lstbxStudents.SelectedIndex;
+        if (selected == -1)
+        {
+            MessageBox.Show("Error: no student selected. Please click on a student and try again");
+            return;
+        }
+        var updateStudentWindow = new UpdateStudentScores(Students[selected]);
+        updateStudentWindow.Owner = this;
         updateStudentWindow.ShowDialog();
     }
 

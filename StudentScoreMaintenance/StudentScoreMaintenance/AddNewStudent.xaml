@@ -10,13 +10,13 @@
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Score:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
         <Label Content="Scores:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="62,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Margin="62,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-        <TextBox HorizontalAlignment="Left" Margin="62,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
-        <Button Content="_Add Score" HorizontalAlignment="Left" Margin="197,45,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
-        <Button Content="Clear _Scores" HorizontalAlignment="Left" Margin="197,107,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
-        <Button Content="_Cancel" HorizontalAlignment="Left" Margin="197,141,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
-        <Button Content="_OK" HorizontalAlignment="Left" Margin="62,141,0,0" VerticalAlignment="Top" Width="110" Height="18"/>
+        <TextBox x:Name="txtScores" HorizontalAlignment="Left" Margin="62,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" IsEnabled="False"/>
+        <TextBox x:Name="txtScore" HorizontalAlignment="Left" Margin="62,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="62,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <Button x:Name="btnAddScore" Content="_Add Score" HorizontalAlignment="Left" Margin="197,45,0,0" VerticalAlignment="Top" Width="110" Height="18" Click="btnAddScore_Click"/>
+        <Button x:Name="btnClearScores" Content="Clear _Scores" HorizontalAlignment="Left" Margin="197,107,0,0" VerticalAlignment="Top" Width="110" Height="18" Click="btnClearScores_Click"/>
+        <Button x:Name="btnCancel" Content="_Cancel" HorizontalAlignment="Left" Margin="197,141,0,0" VerticalAlignment="Top" Width="110" Height="18" Click="btnCancel_Click"/>
+        <Button x:Name="btnOK" Content="_OK" HorizontalAlignment="Left" Margin="62,141,0,0" VerticalAlignment="Top" Width="110" Height="18" Click="btnOK_Click"/>
 
     </Grid>
 </Window>

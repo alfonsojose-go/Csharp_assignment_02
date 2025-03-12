@@ -18,7 +18,7 @@
         <TextBox x:Name="txtScoreCount" HorizontalAlignment="Left" Margin="133,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         <TextBox x:Name="txtAverage" HorizontalAlignment="Left" Margin="133,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="331,284,0,0" VerticalAlignment="Top" Width="80" Click="btnExit_Click"/>
-        <ListBox x:Name="lstbxStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,43,133,180" />
+        <ListBox x:Name="lstbxStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,43,133,180" SelectionMode="Single"/>
     </Grid>
 
 </Window>

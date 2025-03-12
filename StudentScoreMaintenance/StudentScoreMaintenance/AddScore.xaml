@@ -8,9 +8,9 @@
         Title="AddScore" Height="99" Width="189">
     <Grid Margin="0,0,0,-6">
         <Label Content="Score:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="57,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="_Add" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="64"/>
-        <Button Content="_Cancel" HorizontalAlignment="Left" Margin="113,41,0,0" VerticalAlignment="Top" Width="64"/>
+        <TextBox x:Name="txtScore" HorizontalAlignment="Left" Margin="57,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="_Add" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="64" Click="btnAdd_Click"/>
+        <Button x:Name="btnCancel" Content="_Cancel" HorizontalAlignment="Left" Margin="113,41,0,0" VerticalAlignment="Top" Width="64" Click="btnCancel_Click"/>
 
     </Grid>
 </Window>
