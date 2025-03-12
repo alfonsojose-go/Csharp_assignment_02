@@ -26,9 +26,10 @@ namespace StudentScoreMaintenance
         {
             InitializeComponent();
             Student = student;
+            KeyDown += MainWindow_KeyDown;
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
 
             //Check if the Enter key is pressed
@@ -36,12 +37,20 @@ namespace StudentScoreMaintenance
             {
                 // Simulate OK button click
                 int score;
+                // evaluate if score is an integer type
                 if (!Int32.TryParse(txtScore.Text, out score))
-                    return;
+                {
+                    //Display the error message
+                    MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                Student.AddScore(score);
-                (this.Owner as UpdateStudentScores).DisplayScores();
-                this.Close();
+                }
+                else
+                {
+                    Student.AddScore(score);
+                    (this.Owner as UpdateStudentScores).DisplayScores();
+                    this.Close();
+                }
+
             }
             //Check if the ESC key is pressed
             else if (e.Key == Key.Escape)
@@ -54,12 +63,22 @@ namespace StudentScoreMaintenance
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             int score;
+            // evaluate if score is an integer type
             if (!Int32.TryParse(txtScore.Text, out score))
-                return;
+            {
+                //Display the error message
+                MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-            Student.AddScore(score);
-            (this.Owner as UpdateStudentScores).DisplayScores();
-            this.Close();
+            }
+            else
+            {
+                Student.AddScore(score);
+                (this.Owner as UpdateStudentScores).DisplayScores();
+                this.Close();
+            }
+                
+
+            
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

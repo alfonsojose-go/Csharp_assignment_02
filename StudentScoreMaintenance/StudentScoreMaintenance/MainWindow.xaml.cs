@@ -159,7 +159,7 @@ public partial class MainWindow : Window
         int count = selectedStudent.Scores.Count;
         double average = total / count;
 
-        // Update the labels
+        // Update the textboxes
         txtScoreTotal.Text = Convert.ToString(total);
         txtScoreCount.Text = Convert.ToString(count);
         txtAverage.Text = Convert.ToString(average);
