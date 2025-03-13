@@ -14,9 +14,9 @@
         <Label Content="Score Total:" HorizontalAlignment="Left" Margin="46,201,0,0" VerticalAlignment="Top"/>
         <Label Content="Score Count:" HorizontalAlignment="Left" Margin="39,243,0,0" VerticalAlignment="Top"/>
         <Label Content="Average:" HorizontalAlignment="Left" Margin="61,285,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtScoreTotal" HorizontalAlignment="Left" Margin="133,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-        <TextBox x:Name="txtScoreCount" HorizontalAlignment="Left" Margin="133,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-        <TextBox x:Name="txtAverage" HorizontalAlignment="Left" Margin="133,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <TextBox x:Name="txtScoreTotal" HorizontalAlignment="Left" Margin="133,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" IsEnabled="False"/>
+        <TextBox x:Name="txtScoreCount" HorizontalAlignment="Left" Margin="133,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" IsEnabled="False"/>
+        <TextBox x:Name="txtAverage" HorizontalAlignment="Left" Margin="133,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" IsEnabled="False"/>
         <Button x:Name="btnExit" Content="E_xit" HorizontalAlignment="Left" Margin="331,284,0,0" VerticalAlignment="Top" Width="80" Click="btnExit_Click"/>
         <ListBox x:Name="lstbxStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,43,133,180" SelectionMode="Single" SelectionChanged="lstbxStudents_SelectionChanged" MouseDoubleClick="lstbxStudents_MouseDoubleClick" KeyDown="lstbxStudents_KeyDown"/>
     </Grid>

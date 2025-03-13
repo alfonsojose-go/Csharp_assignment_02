@@ -21,7 +21,12 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        Students = new List<Student>();
+        Students = new List<Student>()
+        {
+            new Student("Joel Murach", [97, 91, 83]),
+            new Student("Doug Lowe", [99, 93, 97]),
+            new Student("Anne Boehm", [100, 100, 100])
+        };
         lstbxStudents.ItemsSource = Students;
         KeyDown += MainWindow_KeyDown;
     }
@@ -57,7 +62,7 @@ public partial class MainWindow : Window
 
         Student student = Students[index];
         int total = student.ScoreTotal();
-        int count = student.ScoreTotal();
+        int count = student.ScoreCount();
         txtScoreTotal.Text = total.ToString();
         txtScoreCount.Text = count.ToString();
         if (count == 0)
@@ -66,24 +71,6 @@ public partial class MainWindow : Window
             txtAverage.Text = (total / count).ToString();
     }
 
-    public int CalculateScoreTotal()
-    {
-        int total = 0;
-        foreach (Student student in Students)
-            total += student.ScoreTotal();
-
-        return total;
-    }
-
-    public int CalculateScoreCount()
-    {
-        int count = 0;
-        foreach (Student student in Students)
-            count += student.ScoreCount();
-
-        return count;
-    }
-  
     private void btnExit_Click(object sender, RoutedEventArgs e)
     {
         this.Close();

@@ -128,5 +128,10 @@ namespace StudentScoreMaintenance
             Student.Scores = BackUpScores;
             this.Close();
         }
+
+        private void lstScores_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnRemove_Click(sender, e);
+        }
     }
 }

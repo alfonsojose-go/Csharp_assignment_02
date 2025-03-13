@@ -19,6 +19,12 @@ namespace StudentScoreMaintenance
             Scores = new List<int>();
         }
 
+        public Student(String name, int[] scores)
+        {
+            Name = name;
+            Scores = new List<int>(scores.Where(ValidateScore));
+        }
+
         public Student() : this("") { }
 
         private static bool ValidateScore(int score)
