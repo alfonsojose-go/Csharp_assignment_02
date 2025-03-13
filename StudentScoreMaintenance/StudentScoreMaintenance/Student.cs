@@ -54,6 +54,15 @@ namespace StudentScoreMaintenance
             Scores[index] = newScore;
         }
 
+        // Remove the last score from the list
+        public void RemoveLastScore()
+        {
+            if (Scores.Count > 0)
+            {
+                Scores.RemoveAt(Scores.Count - 1);
+            }
+        }
+
         public void RemoveScore(int index) =>
             Scores.RemoveAt(index);
 

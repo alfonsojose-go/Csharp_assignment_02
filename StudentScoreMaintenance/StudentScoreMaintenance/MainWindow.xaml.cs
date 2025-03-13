@@ -23,6 +23,25 @@ public partial class MainWindow : Window
         InitializeComponent();
         Students = new List<Student>();
         lstbxStudents.ItemsSource = Students;
+        KeyDown += MainWindow_KeyDown;
+    }
+
+    private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+    {
+
+        //Check if the Enter key is pressed
+        if (e.Key == Key.Enter)
+        {
+            //Trigger the Add New Student button's Click event
+            var addNewStudentWindow = new AddNewStudent(Students);
+            addNewStudentWindow.ShowDialog();
+        }
+        //Check if the ESC key is pressed
+        else if (e.Key == Key.Escape)
+        {
+            //Trigger the Exit button's Click event
+            this.Close();
+        }
     }
 
     public void UpdateInfo()
@@ -118,6 +137,32 @@ public partial class MainWindow : Window
             // Show a message if no student is selected
             MessageBox.Show("Please select a student to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
+    }
+
+    private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        // Check if the list box is empty
+        if (lstbxStudents.Items.Count == 0 || lstbxStudents.SelectedIndex == -1)
+        {
+            // Clear the labels if the list box is empty or no item is selected
+            txtScoreTotal.Text = "0";
+            txtScoreCount.Text = "0";
+            txtAverage.Text = "0";
+            return;
+        }
+
+        // Get the selected student's data (assuming the list box contains student objects)
+        Student selectedStudent = (Student)lstbxStudents.SelectedItem;
+
+        // Calculate total, count, and average
+        double total = selectedStudent.Scores.Sum();
+        int count = selectedStudent.Scores.Count;
+        double average = total / count;
+
+        // Update the textboxes
+        txtScoreTotal.Text = Convert.ToString(total);
+        txtScoreCount.Text = Convert.ToString(count);
+        txtAverage.Text = Convert.ToString(average);
     }
 
     /*

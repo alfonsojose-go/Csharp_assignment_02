@@ -29,17 +29,56 @@ namespace StudentScoreMaintenance
             ScoreIndex = scoreIndex;
 
             txtScore.Text = student.Scores[scoreIndex].ToString();
+            KeyDown += MainWindow_KeyDown;
         }
 
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            //Check if the Enter key is pressed
+            if (e.Key == Key.Enter)
+            {
+                // Simulate OK button click
+                int score;
+                // TODO: add message
+                if (!Int32.TryParse(txtScore.Text, out score))
+                {
+                    //Display the error message
+                    MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                }
+                else 
+                {
+                    Student.UpdateScore(score, ScoreIndex);
+                    (this.Owner as UpdateStudentScores).DisplayScores();
+                    this.Close();
+                }
+                
+            }
+            //Check if the ESC key is pressed
+            else if (e.Key == Key.Escape)
+            {
+                // Simulate Cancel button click
+                this.Close();
+            }
+        }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             int score;
-            // TODO: add message
+            // evaluate if score is an integer type
             if (!Int32.TryParse(txtScore.Text, out score))
-                return;
-            Student.UpdateScore(score, ScoreIndex);
-            (this.Owner as UpdateStudentScores).DisplayScores();
-            this.Close();
+            {
+                //Display the error message
+                MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+            else
+            {
+                Student.UpdateScore(score, ScoreIndex);
+                (this.Owner as UpdateStudentScores).DisplayScores();
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

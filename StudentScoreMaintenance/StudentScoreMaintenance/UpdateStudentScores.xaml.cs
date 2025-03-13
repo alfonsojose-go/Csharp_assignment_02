@@ -30,6 +30,23 @@ namespace StudentScoreMaintenance
 
             txtName.Text = student.Name;
             lstScores.ItemsSource = Student.Scores;
+            KeyDown += MainWindow_KeyDown;
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Simulate OK button click
+                (this.Owner as MainWindow).UpdateInfo();
+                this.Close();
+            }
+            else if (e.Key == Key.Escape)
+            {
+                // Simulate Cancel button click
+                Student.Scores = BackUpScores;
+                this.Close();
+            }
         }
 
         public void DisplayScores()
