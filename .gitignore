@@ -1,3 +1,3 @@
 [Bb]in/
 .vs/
-obj/
+**/obj/**
