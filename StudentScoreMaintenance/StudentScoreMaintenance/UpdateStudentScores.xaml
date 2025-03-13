@@ -9,7 +9,7 @@
     <Grid Margin="0,0,0,-6">
         <Label Content="Name:" HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Scores:" HorizontalAlignment="Left" Margin="13,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.406,-1.598"/>
-        <ListBox x:Name="lstScores" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Margin="70,54,0,0" VerticalAlignment="Top" Height="95" Width="164"/>
+        <ListBox x:Name="lstScores" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Margin="70,54,0,0" VerticalAlignment="Top" Height="95" Width="164" KeyDown="lstScores_KeyDown"/>
         <Button x:Name="btnAdd" Content="_Add" HorizontalAlignment="Left" Margin="239,54,0,0" VerticalAlignment="Top" Width="72" Click="btnAdd_Click" TabIndex="1"/>
         <Button x:Name="btnUpdate" Content="_Update" HorizontalAlignment="Left" Margin="239,79,0,0" VerticalAlignment="Top" Width="72" Click="btnUpdate_Click" TabIndex="2"/>
         <Button x:Name="btnRemove" Content="_Remove" HorizontalAlignment="Left" Margin="239,104,0,0" VerticalAlignment="Top" Width="72" Click="btnRemove_Click" TabIndex="3"/>
