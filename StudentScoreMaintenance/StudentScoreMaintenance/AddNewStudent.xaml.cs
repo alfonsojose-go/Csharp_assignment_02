@@ -94,11 +94,23 @@ namespace StudentScoreMaintenance
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
         {
-            // Set name at the last minute
-            Student.Name = txtName.Text;
-            Students.Add(Student);
-            (Application.Current.MainWindow as MainWindow).UpdateInfo();
-            this.Close();
+
+            //check if Student name is empty
+            if (txtName.Text == "" || txtName.Text is null) 
+            {
+                //Display the error message
+                MessageBox.Show("Invalid input! Please enter a name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+            else 
+            {
+                // Set name at the last minute
+                Student.Name = txtName.Text;
+                Students.Add(Student);
+                (Application.Current.MainWindow as MainWindow).UpdateInfo();
+                this.Close();
+            }
+                
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

@@ -41,20 +41,30 @@ namespace StudentScoreMaintenance
             {
                 // Simulate OK button click
                 int score;
-                // TODO: add message
-                if (!Int32.TryParse(txtScore.Text, out score))
+                // evaluate if score is empty or null
+                if (txtScore.Text == "" || txtScore.Text is null)
                 {
                     //Display the error message
-                    MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Invalid input! Please enter a score or press ESC to cancel.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 }
-                else 
+                else
                 {
-                    Student.UpdateScore(score, ScoreIndex);
-                    (this.Owner as UpdateStudentScores).DisplayScores();
-                    this.Close();
+                    // evaluate if score is an integer type
+                    if (!Int32.TryParse(txtScore.Text, out score))
+                    {
+                        //Display the error message
+                        MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                    }
+                    else
+                    {
+                        Student.UpdateScore(score, ScoreIndex);
+                        (this.Owner as UpdateStudentScores).DisplayScores();
+                        this.Close();
+                    }
                 }
-                
+
             }
             //Check if the ESC key is pressed
             else if (e.Key == Key.Escape)
@@ -66,18 +76,28 @@ namespace StudentScoreMaintenance
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             int score;
-            // evaluate if score is an integer type
-            if (!Int32.TryParse(txtScore.Text, out score))
+            // evaluate if score is empty or null
+            if (txtScore.Text == "" || txtScore.Text is null)
             {
                 //Display the error message
-                MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid input! Please enter a score or press ESC to cancel.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
             else
             {
-                Student.UpdateScore(score, ScoreIndex);
-                (this.Owner as UpdateStudentScores).DisplayScores();
-                this.Close();
+                // evaluate if score is an integer type
+                if (!Int32.TryParse(txtScore.Text, out score))
+                {
+                    //Display the error message
+                    MessageBox.Show("Invalid input! Please enter valid numbers.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                }
+                else
+                {
+                    Student.UpdateScore(score, ScoreIndex);
+                    (this.Owner as UpdateStudentScores).DisplayScores();
+                    this.Close();
+                }
             }
         }
 
